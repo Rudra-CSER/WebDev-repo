@@ -1,0 +1,85 @@
+<!-- <!-- 
+📌 JS DOM Cheatsheet:
+✅ createElement() – create a new element
+✅ innerHTML / textContent – set content (textContent safer)
+✅ appendChild() – add element as last child
+✅ querySelector('li:nth-child(n)') – select nth li
+✅ first-child / last-child – select first or last child
+✅ replaceWith() – replace element
+✅ outerHTML – replace entire element
+✅ remove() – delete element
+💡 Check if element exists before actions (e.g., if (el) el.remove())
+-->
+ -->
+
+
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Chai Aur Code</title>
+</head>
+
+<body>
+    <ul class="Language">
+        <li>Javascript</li>
+
+
+    </ul>
+</body>
+<script>
+
+// Adding Value 
+    function addLanguage(langName) {
+        const li = document.createElement('li') //selecting the li useing dom
+        li.innerHTML = `${langName}`//selcting the innerHTml of li
+        document.querySelector(`.Language`).appendChild(li)
+        /* selecting the li using querySelector
+    
+        appendChild() method in JavaScript
+        is used to add a node {usually an element} as the 
+        last child of a specified parent node }-- to li -*/
+    }
+    addLanguage(`pyhton`);
+    addLanguage(`C++`);
+    addLanguage(`Ruby`);
+
+    // Optimised Methode
+
+    function addLanguage1(lang) {
+        const li = document.createElement('li')
+        li.appendChild(document.createTextNode(lang))
+        document.querySelector('.Language').appendChild(li)
+    }
+    addLanguage1(`Flask`)
+
+
+//Editing Vlaues
+
+    //1st approch
+    const thirdLang = document.querySelector("li:nth-child(3)")
+    thirdLang.innerHTML = "replaced Mojo"
+
+
+    ///2nd approch
+    const secondLang = document.querySelector("li:nth-child(2)")
+    const newLi = document.createElement('li')
+    newLi.textContent = "replaced Mojo"
+    secondLang.replaceWith(newLi)
+    // third 
+
+    const frisstLang = document.querySelector("li:first-child")
+    frisstLang.outerHTML = '<li>replaced </li>'
+
+
+
+//Deleting 
+  const lastLang = document.querySelector('li:last-child');
+ lastLang.remove();
+
+</script>
+
+</html>
