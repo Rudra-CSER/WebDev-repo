@@ -6,8 +6,8 @@ const body = document.querySelector('body');
 
 
 buttons.forEach(button => {
-    button.addEventListener('click', event => {
-        switch (event.target.id) {
+    button.addEventListener('click', e => {
+        switch (e.target.id) {
             case 'grey':
                 body.style.backgroundColor = 'grey';
                 break;

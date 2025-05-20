@@ -1,7 +1,8 @@
 const clock = document.getElementById('clock')
 
 
-setInterval(function(){
-    const time = new Date()
-    clock.innerHTML = `<span>${time.toLocaleTimeString()}</span>`
+setInterval(()=>{
+    const time = new Date();
+    clock.innerHTML = `${(time.toLocaleTimeString())}`
+    
 },1000)
