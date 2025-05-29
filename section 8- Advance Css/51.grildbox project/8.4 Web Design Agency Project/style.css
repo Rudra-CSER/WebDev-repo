@@ -1,0 +1,79 @@
+body {
+  font-family: "Poppins", sans-serif;
+  margin: 50px 50px 0 50px;
+  background-color: #faf9f6;
+  display: flex;
+  flex-direction: column;
+  min-height: 95vh;
+
+}
+.bgvideo{
+  position: fixed;
+ top: 0;
+ left: 0;
+ 
+ height: 100%;
+
+}
+.main {
+  flex: 1;
+position: relative;
+ 
+}
+
+h1 {
+  font-size: 5rem;
+}
+
+footer {
+  text-align: right;
+  color: midnightblue;
+}
+.card{
+  width: 45%;
+  box-shadow: 5px 5px 15px 20px rgba(0, 0, 0, 0.05);
+}
+.tile-image{
+  height: 200px;
+  float: left;
+  margin-right: 50px;
+  
+}
+.left{
+  float: left;
+}
+.right{
+  float:right;
+}
+.footer{
+  display: block;
+  z-index: 1;
+}
+
+
+@media (max-width:680px) {
+  .logo{width: 100px;}
+  h1{
+    font-size:3rem;
+    text-align: center;
+  }
+.card{
+  width: 100%;
+  display: block;
+  text-align: justify;
+  margin-bottom: 20px;
+}
+.card img{
+  margin-bottom: 20px;
+  width: 100%;
+  display: inline;
+   object-fit: cover;  /*this is a very importnt line for seting a obj inner image to fit */
+}
+.bgvideo{
+ background-repeat: no-repeat;
+ background-size: cover;
+ background-position: center center;
+  
+}
+
+}
