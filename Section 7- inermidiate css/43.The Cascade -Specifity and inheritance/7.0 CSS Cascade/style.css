@@ -1,0 +1,27 @@
+/* Don't change the existing CSS. */
+
+/* there is a impornent key word that is known as  !important */
+
+
+/* we didt have to add any margin beause of the Css  properties cause our propertie value is allready set */
+#outer-box{
+  background-color: purple;
+}
+/* here we change the position of box and inner box due to the css position properties  */
+.box {
+  background-color: blue;
+  padding: 10px;
+}
+.inner-box{
+  background-color: red;
+}
+
+p {
+  color: yellow;
+  margin: 0;
+  padding: 0;
+}
+/* here we have to write the white box properties in last beacause of the css ppsition properies */
+.white-text{
+  color: white;
+}

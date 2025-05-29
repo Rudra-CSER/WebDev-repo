@@ -1,0 +1,30 @@
+/* Write your code here: */
+
+/* child sector */
+
+div>p{
+    color: firebrick;
+}
+
+
+/* normal secletor */
+body>h1,h2{
+    color: blueviolet;
+}
+
+/* decendent sector */
+
+.box ul {
+    color: blue;
+}
+
+/* chainng secletors  */
+
+li.done{
+    color: green;
+}
+/* combineing combiners */
+
+ul p.done{
+    font-size: 0.5rem;
+} 
