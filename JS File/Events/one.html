@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HTml Events</title>
+</head>
+<body style="background-color: #414141; color: aliceblue;">
+    <h2>Amazing Imgs</h2>
+    <div>
+        <ul id="images">
+            <li id="mountain">
+    <img width="200px" height="200px" src="https://cdn.pixabay.com/photo/2025/05/31/20/23/trees-9634157_1280.jpg" alt="" srcset="">
+            </li>
+            <li id="sea">
+<img width="200px" height="200px" src="https://media.istockphoto.com/id/995369236/photo/starfish-on-beach.jpg?s=2048x2048&w=is&k=20&c=DfQPdxYOerxX7YOeV2KZ8USjw4vOHwbsec5vYJ9ppDc=" alt="">
+            </li>
+            <li id="city">
+                <img width="200px" height="200px" src="https://cdn.pixabay.com/photo/2025/06/03/05/05/paris-9638305_1280.jpg" alt="" > 
+                <!-- onclick="alert('City')"  this is not feasable apporch in js but ok in react -->
+            </li>  
+        </ul>
+    </div>
+ 
+     
+</body>
+<script>
+// document.getElementById('city').onclick = function(){
+//     alert('city')
+// }
+//we sould we event listner cuse this would give us propgation
+//  more events example 
+//attachEvent()
+//jQuerry - onEvent
+
+
+ //Events 
+//type , timestamp , defaultPreventd
+//target , toElement ,srcElement, currentTarget,
+//clintX, Clinty , screenX , screenY
+//altKey , ctrlKey ,shiftKey ,enterKey , keyCode
+
+// document.getElementById('city').addEventListener('click' , function(e){
+//     console.log(e);
+    
+//     alert('City Clicked')
+// }, false) // we have a third paramenter used 
+document.getElementById('images').addEventListener('click' , function(e){
+    console.log('Clicked indise the ul');
+    
+    alert('City Clicked')
+}, false) // we have a third paramenter used 
+document.getElementById('owl').addEventListener('click' , function(e){
+    console.log('Clicked owl');
+    
+    alert('City Clicked')
+}, false) // we have a third paramenter used 
+
+
+
+
+</script>
+</html>
