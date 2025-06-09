@@ -143,3 +143,7 @@ function newGame(){
     playGame = true
   })
 }
+
+function streak(){
+  const apple = 0 ; 
+}
