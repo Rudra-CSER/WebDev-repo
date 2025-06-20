@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+    <h1>Rudra-CSER</h1>
+    <button id="stop">Stop</button>
+</body>
+<script>
+const sayRudra = function(){
+    console.log("Rudra");
+    
+}
+setTimeout(sayRudra , 2000)
+
+const h1Change = function(){
+    document.querySelector('h1').innerHTML = "User Name Has be Updated "
+}
+
+let nameChange = setTimeout(h1Change ,2000)
+
+
+// setTimeout(function(){
+//      console.log("rudra");
+     
+//     },4000) // does a task after a certain time for once
+
+//Clear Time out - >  it stops the set time out function 
+document.getElementById('stop').addEventListener('click', function(){
+clearTimeout(nameChange) 
+console.log("Stoped")
+
+})
+
+
+</script>
+</html>

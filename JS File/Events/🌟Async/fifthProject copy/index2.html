@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Start and Stop button</title>
+</head>
+<body>
+
+    <h1>Git-hub: Rudra</h1>
+    <button id="stop">Stop</button>
+    <button id="start">Start</button>
+
+</body>
+<script>
+// set InterVal  ->> this will do same as set time out except it will do that will loop till stop 
+
+// it also allows third parmeter (e) then 
+
+
+// setInterval(function(){
+//     console.log('Rudra',Date.now());
+    
+// },1000)
+
+const sayDate = function(str){
+    console.log( str ,Date.now());
+}
+
+document.getElementById('start').addEventListener('click', function(){
+
+ const stopPrt =  setInterval(sayDate , 1000 , "hi")   
+
+document.getElementById('stop').addEventListener('click', function(){
+clearInterval(stopPrt)
+})
+
+})
+
+
+//we have clear interval also 
+
+
+
+</script>
+</html>
