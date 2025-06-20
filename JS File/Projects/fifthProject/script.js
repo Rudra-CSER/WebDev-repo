@@ -13,7 +13,10 @@ const RandomColor = function () {
 // Start And Stop bttn Logic 
 let IntervalStatr;
 const startGenarateColor = function () {
+
+  if (!IntervalStatr){
   IntervalStatr = setInterval(StartBttn, 1400);
+  }
   function StartBttn() {
     document.body.style.backgroundColor = RandomColor();
   }
@@ -21,6 +24,7 @@ const startGenarateColor = function () {
 
 const stopGenarateColor = function () {
   clearInterval(IntervalStatr);
+  IntervalStatr = null;
 };
 
 //selecting the buttons
