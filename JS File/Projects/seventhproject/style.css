@@ -1,4 +1,14 @@
 
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: system-ui, sans-serif;
+  color: black;
+  background-color: white;
+}
 
 nav {
   display: flex;
@@ -26,7 +36,12 @@ nav a[aria-current='page'] {
   color: #000;
   background-color: #d4d4d4;
 }
-
+li{
+    list-style: none;
+    font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    text-align: center;
+    font-size: 13px;
+}
 /* To-Do Section Styles */
 #todo {
   margin-top: 50px;
