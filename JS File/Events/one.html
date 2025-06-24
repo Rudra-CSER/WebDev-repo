@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HTml Events</title>
+</head>
+
+<body style="background-color: #414141; color: aliceblue;">
+    <h2>Amazing Imgs</h2>
+    <div>
+        <ul id="images">
+            <li id="mountain">
+                <img width="200px" height="200px"
+                    src="https://cdn.pixabay.com/photo/2025/05/31/20/23/trees-9634157_1280.jpg" alt="" srcset="">
+            </li>
+            <li id="sea">
+                <img width="200px" height="200px"
+                    src="https://media.istockphoto.com/id/995369236/photo/starfish-on-beach.jpg?s=2048x2048&w=is&k=20&c=DfQPdxYOerxX7YOeV2KZ8USjw4vOHwbsec5vYJ9ppDc="
+                    alt="">
+            </li>
+            <li id="city">
+                <img width="200px" height="200px"
+                    src="https://cdn.pixabay.com/photo/2025/06/03/05/05/paris-9638305_1280.jpg" alt="">
+                <!-- onclick="alert('City')"  this is not feasable apporch in js but ok in react -->
+            </li>
+            <li>
+                <a href="https://www.google.co.in/" id="google">Google</a>
+            </li>
+        </ul>
+    </div>
+
+
+</body>
+<script>
+    // document.getElementById('city').onclick = function(){
+    //     alert('city')
+    // }
+    //we sould we event listner cuse this would give us propgation
+    //  more events example 
+    //attachEvent()
+    //jQuerry - onEvent
+
+
+    //Events 
+    //type , timestamp , defaultPreventd
+    //target , toElement ,srcElement, currentTarget,
+    //clintX, Clinty , screenX , screenY
+    //altKey , ctrlKey ,shiftKey ,enterKey , keyCode
+
+    // document.getElementById('city').addEventListener('click' , function(e){
+    //     console.log(e);
+
+    //     alert('City Clicked')
+    // }, false) // we have a third paramenter used 
+    // document.getElementById('images').addEventListener('click' , function(e){
+
+    //     console.log('Clicked indise the ul');
+    //     alert('Other Images Clicked')
+
+    // }, true) // we have a third paramenter used 
+    // document.getElementById('city').addEventListener('click' , function(e){
+    //     console.log('Clicked city');
+    //     alert('City Clicked')
+    // }, true) // we have a third paramenter used 
+    // document.getElementById('google').addEventListener('click', function(e){
+    //     // e.preventDefault()
+    //     e.stopPropagation()
+    //     console.log('google clicked');
+
+    // })
+
+
+    document.querySelector('#images').addEventListener('click', function (e) {
+        console.log(e.target.tagName); 
+        console.log(e.target.id); 
+
+        if (e.target.tagName === 'IMG') {
+            console.log(e.target.id);
+
+            let removeIt = e.target.parentNode
+            removeIt.remove()
+        }
+
+        // removeIt.parentNode.removeChild(removeIt) //alternative way to remove 
+    }, false)
+
+
+    // SUMMERY ---------------------- EVENTS & EVENT HANDLING IN JAVASCRIPT ---------------------- SUMMERY 
+
+// 1️⃣ OLD WAY (not recommended now):
+// document.getElementById('city').onclick = function(){
+//     alert('city')
+// }
+// ❌ Not flexible — doesn't support multiple listeners or event propagation control.
+
+// 2️⃣ RECOMMENDED WAY: Using `addEventListener()`
+// ➤ Syntax: element.addEventListener(eventType, callback, useCapture)
+// ➤ The third parameter `useCapture` controls event flow: true = capturing phase, false = bubbling phase
+
+// ✅ Example using bubbling (default behavior):
+// document.getElementById('city').addEventListener('click', function(e){
+//     console.log(e);
+//     alert('City Clicked');
+// }, false);
+
+// ✅ Example using capturing (less common):
+// document.getElementById('images').addEventListener('click', function(e){
+//     alert('Other Images Clicked');
+// }, true);
+
+// 3️⃣ EVENT FLOW CONCEPTS:
+// ➤ Capturing Phase → Target Phase → Bubbling Phase
+// ➤ UseCapture = true → Capturing
+// ➤ UseCapture = false → Bubbling
+
+// 4️⃣ stopPropagation() vs preventDefault()
+// e.stopPropagation(): Stops the event from bubbling/capturing further.
+// e.preventDefault(): Prevents the default behavior (like following a link).
+
+// ➤ Example: stopping event from bubbling
+// document.getElementById('google').addEventListener('click', function(e){
+//     e.stopPropagation();
+//     console.log('google clicked');
+// })
+
+// ---------------------- DYNAMIC EVENT HANDLING WITH DELEGATION ----------------------
+
+// ✅ EVENT DELEGATION: Adding event listener to parent to handle children clicks.
+document.querySelector('#images').addEventListener('click', function (e) {
+    // ⭐ e.target: The actual element clicked (not necessarily the one listening)
+    // e.target.tagName: To check the element type (like IMG, DIV, etc.)
+    // e.target.id: Get the ID of the clicked element
+
+    console.log(e.target.tagName);  // Logs the clicked element's tag
+    console.log(e.target.id);       // Logs its ID
+
+    // ✅ If an <img> inside #images is clicked
+    if (e.target.tagName === 'IMG') {
+        console.log(e.target.id);
+
+        // ✨ New Topic: DOM Traversal & Removal
+        // e.target.parentNode → The container (likely a <li>) of the clicked image
+        // .remove() → Removes the node from the DOM (modern way)
+        let removeIt = e.target.parentNode;
+        removeIt.remove();
+
+        // 📝 Alternative old way:
+        // removeIt.parentNode.removeChild(removeIt);
+    }
+}, false);
+
+function streak(){
+    const streak = 1;
+}
+
+// ---------------------- NEW TOPICS HIGHLIGHTED ----------------------
+// ✅ Event Bubbling vs Capturing (third parameter in addEventListener)
+// ✅ stopPropagation()
+// ✅ Event Delegation using parent element
+// ✅ Event Object properties: e.target, e.tagName, e.id
+// ✅ Removing DOM Elements dynamically with .remove()
+// ✅ Alternative old DOM removal: parentNode.removeChild()
+
+
+</script>
+
+</html>

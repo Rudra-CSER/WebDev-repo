@@ -1,0 +1,30 @@
+*{
+    text-align: center;
+    margin: 5px;
+}
+#page{
+    border: 2px solid;
+    
+}
+.main-text{
+    text-align: center;
+    position: relative;
+    top: 50%;
+    font-size: 50px;
+}
+
+.Side-bar{
+    float: left;
+    width: 23%;
+    height: 50rem;
+
+}
+.Main{
+    float: right;
+    width: 75%;
+    height: 50rem;
+    
+}
+.Footer{
+    clear: both;
+}

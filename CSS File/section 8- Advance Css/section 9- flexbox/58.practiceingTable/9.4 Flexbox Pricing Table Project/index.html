@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <title>Flexbox Pricing Table</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Sono:wght@400;700&display=swap" rel="stylesheet">
+  <style>
+    body {
+      background: rgb(78, 170, 205);
+      background: linear-gradient(121deg, rgba(78, 170, 205, 0.7895950616574755) 0%, rgba(164, 255, 180, 0.6747491232821253) 100%);
+      background-repeat: no-repeat;
+      background-attachment:fixed;
+    }
+
+    body {
+      font-family: 'Sono', sans-serif;
+    }
+
+    #class1 {
+      width: 380px;
+
+    }
+
+    .plan-title {
+ 
+      background-color: rgb(26, 216, 219);
+      background: linear-gradient(121deg, rgba(26, 216, 219, 1) 0%, rgba(253, 187, 45, 1) 100%);
+      
+    }
+
+    .pricing-container {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+      gap: 2rem;
+
+    }
+
+    .pricing-plan {
+
+      flex: 1;
+      transition: all .2s ease-in-out;
+      max-width: 400px;
+      padding: 20px;
+      background-color: #f2f2f2;
+      text-align: center;
+      border-radius: 5px;
+    }
+
+    .plan-title {
+      color: rgb(239, 247, 222);
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 200px;
+      font-size: 50px;
+      font-weight: bold;
+      margin: 10px;
+      border-radius: 5px;
+    }
+
+
+    .pricestyle1{
+      font-weight: 50;
+      float: inline-start;
+      font-size: 40px;
+    }
+    .pricestyle2{
+      font-size: 25px;
+    }
+    .plan-price {
+      font-size: 68px;
+      font-weight: bolder;
+      margin: 10px;
+    }
+
+    .plan-features {
+      list-style: none;
+      margin: 0px;
+      padding: 10px;
+    }
+
+    .pricing-container li {
+      margin-bottom: 20px;
+
+
+
+    }
+    h3 {
+  font-size: 1.5em;
+  letter-spacing: 0.0625em;
+  margin: 0 0 0.3333333333333333em;
+}
+    .plan-button {
+      background-color: rgb(26, 216, 219);
+      background: linear-gradient(121deg, rgba(26, 216, 219, 1) 0%, rgba(253, 187, 45, 1) 100%);
+      color: white;
+      width: 6rem;
+      font-size: large;
+      border: none;
+      margin: 10px;
+      height: 40px;
+      border-radius: 5px;
+      transition: all .2s ease-in-out;
+    }
+
+    .plan-button:hover {
+      cursor: pointer;
+      background-color: rgb(26, 216, 219);
+      background: linear-gradient(121deg, rgb(8, 104, 105) 0%, rgb(187, 134, 18) 100%);
+      color: rgba(255, 255, 255, 0.991);
+      transform: scale(1.1);
+    }
+    .pricing-plan:hover {
+      transform: scale(1.1);
+
+    }
+
+    /* Hint: What can you do with a media query and flexbox? */
+    @media (max-width: 1250px) {
+      .pricing-container {
+
+        flex-direction: column;
+        height: 100%;
+      }
+    }
+  </style>
+</head>
+
+<body>
+  <div class="pricing-container">
+    <div class="pricing-plan" id="class1">
+      <div class="plan-title basic">Basic</div>
+      <div class="plan-price"><sup class="pricestyle1">$</sup>9.99<samp class="pricestyle2">/mo</samp></div>
+      <ul class="plan-features">
+        <li>✅ 10GB Storage</li>
+        <li>✅ 1 User</li>
+        <li>🚫 Support</li>
+      </ul>
+      <button class="plan-button " >Sign Up</a>
+    </div>
+    <div class="pricing-plan" id="class1">
+      <div class="plan-title">Standard</div>
+      <div class="plan-price"><sup class="pricestyle1">$</sup>19.99<samp class="pricestyle2">/mo</samp></div>
+      <ul class="plan-features">
+        <li>✅ 50GB Storage</li>
+        <li>✅ 5 Users</li>
+        <li>✅ Phone &amp; Email Support</li>
+      </ul>
+      <button class="plan-button">Sign Up</a>
+    </div>
+    <div class="pricing-plan" id="class1">
+      <div class="plan-title" >Premium</div>
+      <div class="plan-price"><sup class="pricestyle1">$</sup>49.99<samp class="pricestyle2">/mo</samp></div>
+      <ul class="plan-features">
+        <li>✅ 100GB Storage</li>
+        <li>✅ 10 Users</li>
+        <li>✅ 24/7 Support</li>
+
+      </ul>
+      <button class="plan-button">Sign Up</a>
+    </div>
+  </div>
+
+</body>
+
+</html>
