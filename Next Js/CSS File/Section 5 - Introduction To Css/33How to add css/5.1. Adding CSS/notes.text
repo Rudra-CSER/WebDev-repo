@@ -1,7 +1,0 @@
-there are three types of css adding stuyles 
-1. inline --- <tag style = "css"/>
-2. internal --- <style>css<style/>
-3. External --- <link herf="style.css"/>
-
-
-there are many types of usages of this type of tags in many orderss
